@@ -10,7 +10,9 @@ class School
   end
 
   def add_student(name, grade) #grade is like 6th grade, 7th 8th etc
-    roster[grade] = [] unless roster[grade] # takes into account for empty hash
+    #roster[grade] = [] unless roster[grade] 
+    # takes into account for empty hash
+    roster[grade] ||= []
     roster[grade] << name
   end
 
