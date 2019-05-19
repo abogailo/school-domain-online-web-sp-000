@@ -13,7 +13,7 @@ class School
     roster[grade] = [] unless roster[grade] # takes into account for empty hash
     roster[grade] << name
   end
-  
+
   def grade(level)
     roster[level]
   end
