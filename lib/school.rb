@@ -9,8 +9,20 @@ class School
     @roster
   end
 
-  def add_student(name, grade) #grade is like 6th 7th 8th
-    roster[grade] = [] unless roster[grade]
+  def add_student(name, grade) #grade is like 6th grade, 7th 8th etc
+    roster[grade] = [] unless roster[grade] # takes into account for empty hash
     roster[grade] << name
+  end
+  
+  def grade(level)
+    roster[level]
+  end
+
+  def sort
+    sorted = {}
+    roster.each do |name, grade|
+      sorted[name] = y.sort
+    end
+    sorted
   end
 end
